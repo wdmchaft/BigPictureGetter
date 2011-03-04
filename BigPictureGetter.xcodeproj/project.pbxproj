@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		462CB3F41320A38E001913B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462CB3F31320A38E001913B0 /* UIKit.framework */; };
+		462CB3F61320A38E001913B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462CB3F51320A38E001913B0 /* Foundation.framework */; };
+		462CB3F81320A38E001913B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462CB3F71320A38E001913B0 /* CoreGraphics.framework */; };
+		462CB3FE1320A38E001913B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 462CB3FC1320A38E001913B0 /* InfoPlist.strings */; };
+		462CB4011320A38E001913B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 462CB4001320A38E001913B0 /* main.m */; };
+		462CB4041320A38E001913B0 /* BigPictureGetterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 462CB4031320A38E001913B0 /* BigPictureGetterAppDelegate.m */; };
+		462CB4071320A38E001913B0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462CB4051320A38E001913B0 /* MainWindow.xib */; };
+		462CB40E1320A38E001913B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462CB3F31320A38E001913B0 /* UIKit.framework */; };
+		462CB40F1320A38E001913B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462CB3F51320A38E001913B0 /* Foundation.framework */; };
+		462CB4101320A38E001913B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462CB3F71320A38E001913B0 /* CoreGraphics.framework */; };
+		462CB4181320A38E001913B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 462CB4161320A38E001913B0 /* InfoPlist.strings */; };
+		462CB41B1320A38F001913B0 /* BigPictureGetterTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 462CB41A1320A38F001913B0 /* BigPictureGetterTests.h */; };
+		462CB41D1320A38F001913B0 /* BigPictureGetterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 462CB41C1320A38F001913B0 /* BigPictureGetterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		462CB4111320A38E001913B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 462CB3E61320A38E001913B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 462CB3EE1320A38E001913B0;
+			remoteInfo = BigPictureGetter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		462CB3EF1320A38E001913B0 /* BigPictureGetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigPictureGetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		462CB3F31320A38E001913B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		462CB3F51320A38E001913B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		462CB3F71320A38E001913B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		462CB3FB1320A38E001913B0 /* BigPictureGetter-Info.plist */ = {isa = PBXFileReference; path = "BigPictureGetter-Info.plist"; sourceTree = "<group>"; };
+		462CB3FD1320A38E001913B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		462CB3FF1320A38E001913B0 /* BigPictureGetter-Prefix.pch */ = {isa = PBXFileReference; path = "BigPictureGetter-Prefix.pch"; sourceTree = "<group>"; };
+		462CB4001320A38E001913B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		462CB4021320A38E001913B0 /* BigPictureGetterAppDelegate.h */ = {isa = PBXFileReference; path = BigPictureGetterAppDelegate.h; sourceTree = "<group>"; };
+		462CB4031320A38E001913B0 /* BigPictureGetterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigPictureGetterAppDelegate.m; sourceTree = "<group>"; };
+		462CB4061320A38E001913B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		462CB40D1320A38E001913B0 /* BigPictureGetterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigPictureGetterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		462CB4151320A38E001913B0 /* BigPictureGetterTests-Info.plist */ = {isa = PBXFileReference; path = "BigPictureGetterTests-Info.plist"; sourceTree = "<group>"; };
+		462CB4171320A38E001913B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		462CB4191320A38E001913B0 /* BigPictureGetterTests-Prefix.pch */ = {isa = PBXFileReference; path = "BigPictureGetterTests-Prefix.pch"; sourceTree = "<group>"; };
+		462CB41A1320A38F001913B0 /* BigPictureGetterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigPictureGetterTests.h; sourceTree = "<group>"; };
+		462CB41C1320A38F001913B0 /* BigPictureGetterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigPictureGetterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		462CB3EC1320A38E001913B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462CB3F41320A38E001913B0 /* UIKit.framework in Frameworks */,
+				462CB3F61320A38E001913B0 /* Foundation.framework in Frameworks */,
+				462CB3F81320A38E001913B0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462CB4091320A38E001913B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462CB40E1320A38E001913B0 /* UIKit.framework in Frameworks */,
+				462CB40F1320A38E001913B0 /* Foundation.framework in Frameworks */,
+				462CB4101320A38E001913B0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		462CB3E41320A38E001913B0 = {
+			isa = PBXGroup;
+			children = (
+				462CB3F91320A38E001913B0 /* BigPictureGetter */,
+				462CB4131320A38E001913B0 /* BigPictureGetterTests */,
+				462CB3F21320A38E001913B0 /* Frameworks */,
+				462CB3F01320A38E001913B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		462CB3F01320A38E001913B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				462CB3EF1320A38E001913B0 /* BigPictureGetter.app */,
+				462CB40D1320A38E001913B0 /* BigPictureGetterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		462CB3F21320A38E001913B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				462CB3F31320A38E001913B0 /* UIKit.framework */,
+				462CB3F51320A38E001913B0 /* Foundation.framework */,
+				462CB3F71320A38E001913B0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		462CB3F91320A38E001913B0 /* BigPictureGetter */ = {
+			isa = PBXGroup;
+			children = (
+				462CB4021320A38E001913B0 /* BigPictureGetterAppDelegate.h */,
+				462CB4031320A38E001913B0 /* BigPictureGetterAppDelegate.m */,
+				462CB4051320A38E001913B0 /* MainWindow.xib */,
+				462CB3FA1320A38E001913B0 /* Supporting Files */,
+			);
+			path = BigPictureGetter;
+			sourceTree = "<group>";
+		};
+		462CB3FA1320A38E001913B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				462CB3FB1320A38E001913B0 /* BigPictureGetter-Info.plist */,
+				462CB3FC1320A38E001913B0 /* InfoPlist.strings */,
+				462CB3FF1320A38E001913B0 /* BigPictureGetter-Prefix.pch */,
+				462CB4001320A38E001913B0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		462CB4131320A38E001913B0 /* BigPictureGetterTests */ = {
+			isa = PBXGroup;
+			children = (
+				462CB41A1320A38F001913B0 /* BigPictureGetterTests.h */,
+				462CB41C1320A38F001913B0 /* BigPictureGetterTests.m */,
+				462CB4141320A38E001913B0 /* Supporting Files */,
+			);
+			path = BigPictureGetterTests;
+			sourceTree = "<group>";
+		};
+		462CB4141320A38E001913B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				462CB4151320A38E001913B0 /* BigPictureGetterTests-Info.plist */,
+				462CB4161320A38E001913B0 /* InfoPlist.strings */,
+				462CB4191320A38E001913B0 /* BigPictureGetterTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		462CB3EE1320A38E001913B0 /* BigPictureGetter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462CB4201320A38F001913B0 /* Build configuration list for PBXNativeTarget "BigPictureGetter" */;
+			buildPhases = (
+				462CB3EB1320A38E001913B0 /* Sources */,
+				462CB3EC1320A38E001913B0 /* Frameworks */,
+				462CB3ED1320A38E001913B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BigPictureGetter;
+			productName = BigPictureGetter;
+			productReference = 462CB3EF1320A38E001913B0 /* BigPictureGetter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		462CB40C1320A38E001913B0 /* BigPictureGetterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462CB4231320A38F001913B0 /* Build configuration list for PBXNativeTarget "BigPictureGetterTests" */;
+			buildPhases = (
+				462CB4081320A38E001913B0 /* Sources */,
+				462CB4091320A38E001913B0 /* Frameworks */,
+				462CB40A1320A38E001913B0 /* Resources */,
+				462CB40B1320A38E001913B0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				462CB4121320A38E001913B0 /* PBXTargetDependency */,
+			);
+			name = BigPictureGetterTests;
+			productName = BigPictureGetterTests;
+			productReference = 462CB40D1320A38E001913B0 /* BigPictureGetterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		462CB3E61320A38E001913B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = ACER;
+			};
+			buildConfigurationList = 462CB3E91320A38E001913B0 /* Build configuration list for PBXProject "BigPictureGetter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 462CB3E41320A38E001913B0;
+			productRefGroup = 462CB3F01320A38E001913B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				462CB3EE1320A38E001913B0 /* BigPictureGetter */,
+				462CB40C1320A38E001913B0 /* BigPictureGetterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		462CB3ED1320A38E001913B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462CB3FE1320A38E001913B0 /* InfoPlist.strings in Resources */,
+				462CB4071320A38E001913B0 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462CB40A1320A38E001913B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462CB4181320A38E001913B0 /* InfoPlist.strings in Resources */,
+				462CB41B1320A38F001913B0 /* BigPictureGetterTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		462CB40B1320A38E001913B0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		462CB3EB1320A38E001913B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462CB4011320A38E001913B0 /* main.m in Sources */,
+				462CB4041320A38E001913B0 /* BigPictureGetterAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462CB4081320A38E001913B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462CB41D1320A38F001913B0 /* BigPictureGetterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		462CB4121320A38E001913B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 462CB3EE1320A38E001913B0 /* BigPictureGetter */;
+			targetProxy = 462CB4111320A38E001913B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		462CB3FC1320A38E001913B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				462CB3FD1320A38E001913B0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		462CB4051320A38E001913B0 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				462CB4061320A38E001913B0 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		462CB4161320A38E001913B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				462CB4171320A38E001913B0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		462CB41E1320A38F001913B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		462CB41F1320A38F001913B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		462CB4211320A38F001913B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BigPictureGetter/BigPictureGetter-Prefix.pch";
+				INFOPLIST_FILE = "BigPictureGetter/BigPictureGetter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		462CB4221320A38F001913B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BigPictureGetter/BigPictureGetter-Prefix.pch";
+				INFOPLIST_FILE = "BigPictureGetter/BigPictureGetter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		462CB4241320A38F001913B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BigPictureGetter.app/BigPictureGetter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BigPictureGetterTests/BigPictureGetterTests-Prefix.pch";
+				INFOPLIST_FILE = "BigPictureGetterTests/BigPictureGetterTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		462CB4251320A38F001913B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BigPictureGetter.app/BigPictureGetter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BigPictureGetterTests/BigPictureGetterTests-Prefix.pch";
+				INFOPLIST_FILE = "BigPictureGetterTests/BigPictureGetterTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		462CB3E91320A38E001913B0 /* Build configuration list for PBXProject "BigPictureGetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462CB41E1320A38F001913B0 /* Debug */,
+				462CB41F1320A38F001913B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		462CB4201320A38F001913B0 /* Build configuration list for PBXNativeTarget "BigPictureGetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462CB4211320A38F001913B0 /* Debug */,
+				462CB4221320A38F001913B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		462CB4231320A38F001913B0 /* Build configuration list for PBXNativeTarget "BigPictureGetterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462CB4241320A38F001913B0 /* Debug */,
+				462CB4251320A38F001913B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 462CB3E61320A38E001913B0 /* Project object */;
+}
