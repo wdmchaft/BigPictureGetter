@@ -12,12 +12,68 @@
 
 
 @synthesize window=_window;
+@synthesize url;
+@synthesize urlLabel;
+@synthesize htmlOutput;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)getUrl:(id)sender
+{
+    NSLog(@"user hit Get URL button");
+    self.url = @"http://www.boston.com/bigpicture/";
+    // self.url = @"http://local-oars/test.html";
+    // NSLog(@"%@", self.url);
+    [self.urlLabel setText:self.url];
+    
+    NSURL *aUrl = [NSURL URLWithString:self.url];
+    NSLog(@"%@", [aUrl absoluteString]);
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:aUrl];
+    NSLog(@"%@", request);
+    [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+    if ([request respondsToSelector:@selector(allHTTPHeaderFields)]) {
+        NSDictionary *requestHeaders = [request allHTTPHeaderFields];
+        NSLog(@"%@", [requestHeaders description]);
+    }
+    NSHTTPURLResponse *response;
+    NSError *error = nil;
+    
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if ([response respondsToSelector:@selector(allHeaderFields)]) {
+        NSDictionary *responseHeaders = [response allHeaderFields];
+        NSLog(@"%@", [responseHeaders description]);
+    }
+    
+    if (data != nil) {
+        
+        NSString *dataAsString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if (!dataAsString) {
+            dataAsString = [[NSString alloc] initWithData:data encoding:NSISOLatin1StringEncoding];
+        }
+        // no need to try NSASCIIStringEncoding as NSUTF8StringEncoding includes it,
+        // see http://www.mikeash.com/pyblog/friday-qa-2010-02-19-character-encodings.html
+        if (!dataAsString) {
+            dataAsString = [[NSString alloc] initWithData:data encoding:NSMacOSRomanStringEncoding];
+        }
+        
+        // NSLog(@"%@", data);
+        NSLog(@"%@", dataAsString);
+        
+        [self.htmlOutput setText:dataAsString];
+        
+        [dataAsString release];
+    } else {
+        [self.htmlOutput setText:@"Can't access page"];
+        NSLog(@"%@", error);
+    }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

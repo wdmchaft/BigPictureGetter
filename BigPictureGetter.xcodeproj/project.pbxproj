@@ -37,17 +37,17 @@
 		462CB3F31320A38E001913B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		462CB3F51320A38E001913B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		462CB3F71320A38E001913B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		462CB3FB1320A38E001913B0 /* BigPictureGetter-Info.plist */ = {isa = PBXFileReference; path = "BigPictureGetter-Info.plist"; sourceTree = "<group>"; };
+		462CB3FB1320A38E001913B0 /* BigPictureGetter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BigPictureGetter-Info.plist"; sourceTree = "<group>"; };
 		462CB3FD1320A38E001913B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		462CB3FF1320A38E001913B0 /* BigPictureGetter-Prefix.pch */ = {isa = PBXFileReference; path = "BigPictureGetter-Prefix.pch"; sourceTree = "<group>"; };
+		462CB3FF1320A38E001913B0 /* BigPictureGetter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BigPictureGetter-Prefix.pch"; sourceTree = "<group>"; };
 		462CB4001320A38E001913B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		462CB4021320A38E001913B0 /* BigPictureGetterAppDelegate.h */ = {isa = PBXFileReference; path = BigPictureGetterAppDelegate.h; sourceTree = "<group>"; };
+		462CB4021320A38E001913B0 /* BigPictureGetterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigPictureGetterAppDelegate.h; sourceTree = "<group>"; };
 		462CB4031320A38E001913B0 /* BigPictureGetterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigPictureGetterAppDelegate.m; sourceTree = "<group>"; };
 		462CB4061320A38E001913B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		462CB40D1320A38E001913B0 /* BigPictureGetterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigPictureGetterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		462CB4151320A38E001913B0 /* BigPictureGetterTests-Info.plist */ = {isa = PBXFileReference; path = "BigPictureGetterTests-Info.plist"; sourceTree = "<group>"; };
+		462CB4151320A38E001913B0 /* BigPictureGetterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BigPictureGetterTests-Info.plist"; sourceTree = "<group>"; };
 		462CB4171320A38E001913B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		462CB4191320A38E001913B0 /* BigPictureGetterTests-Prefix.pch */ = {isa = PBXFileReference; path = "BigPictureGetterTests-Prefix.pch"; sourceTree = "<group>"; };
+		462CB4191320A38E001913B0 /* BigPictureGetterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BigPictureGetterTests-Prefix.pch"; sourceTree = "<group>"; };
 		462CB41A1320A38F001913B0 /* BigPictureGetterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigPictureGetterTests.h; sourceTree = "<group>"; };
 		462CB41C1320A38F001913B0 /* BigPictureGetterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigPictureGetterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -433,6 +433,7 @@
 				462CB4221320A38F001913B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		462CB4231320A38F001913B0 /* Build configuration list for PBXNativeTarget "BigPictureGetterTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +442,7 @@
 				462CB4251320A38F001913B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
