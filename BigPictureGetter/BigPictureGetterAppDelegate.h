@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const BigPictureURL;
+
 @interface BigPictureGetterAppDelegate : NSObject <UIApplicationDelegate> {
     UIButton *button;
     UILabel *urlLabel;
@@ -16,6 +18,7 @@
 }
 
 - (IBAction)getUrl:(id)sender;
+- (void)loadUrl;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) NSString *url;

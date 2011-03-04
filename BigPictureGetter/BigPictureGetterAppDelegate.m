@@ -8,6 +8,8 @@
 
 #import "BigPictureGetterAppDelegate.h"
 
+NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
+
 @implementation BigPictureGetterAppDelegate
 
 
@@ -20,18 +22,25 @@
 {
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
+    
+    [self loadUrl];
+    
     return YES;
+}
+
+- (void)loadUrl
+{
+    NSLog(@"application loaded");
+    
+    
 }
 
 - (void)getUrl:(id)sender
 {
     NSLog(@"user hit Get URL button");
-    self.url = @"http://www.boston.com/bigpicture/";
-    // self.url = @"http://local-oars/test.html";
-    // NSLog(@"%@", self.url);
-    [self.urlLabel setText:self.url];
+    [self.urlLabel setText:BigPictureURL];
     
-    NSURL *aUrl = [NSURL URLWithString:self.url];
+    NSURL *aUrl = [NSURL URLWithString:BigPictureURL];
     NSLog(@"%@", [aUrl absoluteString]);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:aUrl];
