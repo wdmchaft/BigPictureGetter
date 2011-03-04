@@ -14,8 +14,6 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
 
 
 @synthesize window=_window;
-@synthesize url;
-@synthesize urlLabel;
 @synthesize htmlOutput;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -31,19 +29,10 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
 - (void)loadUrl
 {
     NSLog(@"application loaded");
+    NSURL *url = [NSURL URLWithString:BigPictureURL];
+    NSLog(@"%@", [url absoluteString]);
     
-    
-}
-
-- (void)getUrl:(id)sender
-{
-    NSLog(@"user hit Get URL button");
-    [self.urlLabel setText:BigPictureURL];
-    
-    NSURL *aUrl = [NSURL URLWithString:BigPictureURL];
-    NSLog(@"%@", [aUrl absoluteString]);
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:aUrl];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSLog(@"%@", request);
     [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
     if ([request respondsToSelector:@selector(allHTTPHeaderFields)]) {
@@ -61,7 +50,6 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
     }
     
     if (data != nil) {
-        
         NSString *dataAsString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         if (!dataAsString) {
             dataAsString = [[NSString alloc] initWithData:data encoding:NSISOLatin1StringEncoding];
@@ -72,16 +60,14 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
             dataAsString = [[NSString alloc] initWithData:data encoding:NSMacOSRomanStringEncoding];
         }
         
-        // NSLog(@"%@", data);
-        NSLog(@"%@", dataAsString);
-        
-        [self.htmlOutput setText:dataAsString];
+        [self.htmlOutput setText:@"page loaded"];
         
         [dataAsString release];
     } else {
         [self.htmlOutput setText:@"Can't access page"];
         NSLog(@"%@", error);
     }
+
     
 }
 
