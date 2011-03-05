@@ -12,13 +12,14 @@
 
 #import "TFHpple.h"
 
+#import "BigImageViewController.h"
+
 NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
 
 @implementation BigPictureGetterAppDelegate
 
-
 @synthesize window=_window;
-@synthesize imageView;
+@synthesize imageViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -51,7 +52,24 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
     UIImage *firstImage = [[UIImage alloc] initWithData: [NSData dataWithContentsOfURL: firstImageUrl]];
     NSLog(@"%@", firstImage);
     
-    [self.imageView setImage:firstImage];
+    [self.window addSubview:imageViewController.imageView];
+    
+    NSLog(@"%@", imageViewController.imageView);
+
+    [imageViewController.imageView setImage:firstImage];
+    NSLog(@"%@", imageViewController.imageView);
+
+    [self.window makeKeyAndVisible];
+
+    
+//    [self.imageView setImage:firstImage];
+//    NSLog(@"%@", self.imageView);
+    
+//    UIImageView* iv = [[UIImageView alloc] initWithImage:firstImage];
+//    [self.window addSubview: iv];
+//    iv.center = self.window.center;
+//    [iv release];
+
     
     // release it now as it's no longer required
     [firstImage release];
@@ -151,6 +169,7 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
 
 - (void)dealloc
 {
+    [imageViewController release];
     [_window release];
     [super dealloc];
 }

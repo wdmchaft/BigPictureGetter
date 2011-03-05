@@ -8,16 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class BigImageViewController;
+
 extern NSString *const BigPictureURL;
 
 @interface BigPictureGetterAppDelegate : NSObject <UIApplicationDelegate> {
-    UIImageView *imageView;
+    BigImageViewController *imageViewController;
 }
 
 - (NSData *)getHtmlData;
 - (NSArray *)getImageURLsFromHtml:(NSData *)html;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+@property (nonatomic, retain) IBOutlet BigImageViewController *imageViewController;
+
 
 @end
