@@ -21,12 +21,24 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     
-    [self loadUrl];
+    [self getImageURLsFromHtml:[self getHtml]];
     
     return YES;
 }
 
-- (void)loadUrl
+- (NSMutableArray *)getImageURLsFromHtml:(NSString *)html
+{
+    NSMutableArray *imageUrls = [[NSMutableArray alloc] init];
+    // parse html    
+    
+    
+    // release it now as it's no longer required
+    [html release];
+    
+    return imageUrls;
+}
+
+- (NSString *)getHtml
 {
     NSLog(@"application loaded");
     NSURL *url = [NSURL URLWithString:BigPictureURL];
@@ -62,12 +74,15 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
         
         [self.htmlOutput setText:@"page loaded"];
         
-        [dataAsString release];
+        return dataAsString;
+        
+//        [dataAsString release];
     } else {
         [self.htmlOutput setText:@"Can't access page"];
         NSLog(@"%@", error);
+        
+        return nil;
     }
-
     
 }
 
