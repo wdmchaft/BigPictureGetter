@@ -8,6 +8,10 @@
 
 #import "BigPictureGetterAppDelegate.h"
 
+#include <libxml/HTMLparser.h>
+
+#import "TFHpple.h"
+
 NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
 
 @implementation BigPictureGetterAppDelegate
@@ -21,24 +25,34 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     
-    [self getImageURLsFromHtml:[self getHtml]];
+    [self getImageURLsFromHtml:[self getHtmlData]];
     
     return YES;
 }
 
-- (NSMutableArray *)getImageURLsFromHtml:(NSString *)html
+- (NSArray *)getImageURLsFromHtml:(NSData *)htmlData
 {
-    NSMutableArray *imageUrls = [[NSMutableArray alloc] init];
+    // NSMutableArray *imageUrls = [[NSMutableArray alloc] init];
     // parse html    
+    TFHpple *parser = [[TFHpple alloc] initWithHTMLData:htmlData];
+
+    NSArray *imageUrls = [parser search:@"//img[@class='bpImage']"];
+    
+    int i = 0;
+    for (i = 0; i < [imageUrls count]; i++) {
+        NSLog(@"%@", [[imageUrls objectAtIndex:i] objectForKey:@"src"]);
+    }
     
     
     // release it now as it's no longer required
-    [html release];
+//    [htmlData release];
+    
+    [parser release];
     
     return imageUrls;
 }
 
-- (NSString *)getHtml
+- (NSData *)getHtmlData
 {
     NSLog(@"application loaded");
     NSURL *url = [NSURL URLWithString:BigPictureURL];
@@ -74,7 +88,9 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
         
         [self.htmlOutput setText:@"page loaded"];
         
-        return dataAsString;
+//        return dataAsString;
+        
+        return data;
         
 //        [dataAsString release];
     } else {

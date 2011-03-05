@@ -14,8 +14,8 @@ extern NSString *const BigPictureURL;
     UILabel *htmlOutput;
 }
 
-- (NSString *)getHtml;
-- (NSMutableArray *)getImageURLsFromHtml:(NSString *)html;
+- (NSData *)getHtmlData;
+- (NSArray *)getImageURLsFromHtml:(NSData *)html;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UILabel *htmlOutput;
