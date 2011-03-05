@@ -18,7 +18,7 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
 
 
 @synthesize window=_window;
-@synthesize htmlOutput;
+@synthesize imageView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -38,15 +38,23 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
 
     NSArray *imageUrls = [parser search:@"//img[@class='bpImage']"];
     
-    int i = 0;
-    for (i = 0; i < [imageUrls count]; i++) {
-        NSLog(@"%@", [[imageUrls objectAtIndex:i] objectForKey:@"src"]);
-    }
+//    int i = 0;
+//    for (i = 0; i < [imageUrls count]; i++) {
+//        NSLog(@"%@", [[imageUrls objectAtIndex:i] objectForKey:@"src"]);
+//    }
     
+    NSString *firstImageUrlString = [[imageUrls objectAtIndex:0] objectForKey:@"src"];
+    NSLog(@"%@", firstImageUrlString);
+    
+    NSURL *firstImageUrl = [NSURL URLWithString:firstImageUrlString];
+    
+    UIImage *firstImage = [[UIImage alloc] initWithData: [NSData dataWithContentsOfURL: firstImageUrl]];
+    NSLog(@"%@", firstImage);
+    
+    [self.imageView setImage:firstImage];
     
     // release it now as it's no longer required
-//    [htmlData release];
-    
+    [firstImage release];
     [parser release];
     
     return imageUrls;
@@ -86,7 +94,7 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
             dataAsString = [[NSString alloc] initWithData:data encoding:NSMacOSRomanStringEncoding];
         }
         
-        [self.htmlOutput setText:@"page loaded"];
+//        [self.htmlOutput setText:@"page loaded"];
         
 //        return dataAsString;
         
@@ -94,7 +102,7 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
         
 //        [dataAsString release];
     } else {
-        [self.htmlOutput setText:@"Can't access page"];
+//        [self.htmlOutput setText:@"Can't access page"];
         NSLog(@"%@", error);
         
         return nil;

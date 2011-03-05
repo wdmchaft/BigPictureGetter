@@ -11,13 +11,13 @@
 extern NSString *const BigPictureURL;
 
 @interface BigPictureGetterAppDelegate : NSObject <UIApplicationDelegate> {
-    UILabel *htmlOutput;
+    UIImageView *imageView;
 }
 
 - (NSData *)getHtmlData;
 - (NSArray *)getImageURLsFromHtml:(NSData *)html;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UILabel *htmlOutput;
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
 
 @end
