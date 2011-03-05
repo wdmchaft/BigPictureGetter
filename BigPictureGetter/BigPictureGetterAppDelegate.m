@@ -9,10 +9,9 @@
 #import "BigPictureGetterAppDelegate.h"
 
 #include <libxml/HTMLparser.h>
-
 #import "TFHpple.h"
-
 #import "BigImageViewController.h"
+#import "MyImageViewClass.h"
 
 NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
 
@@ -52,15 +51,21 @@ NSString *const BigPictureURL = @"http://www.boston.com/bigpicture/";
     UIImage *firstImage = [[UIImage alloc] initWithData: [NSData dataWithContentsOfURL: firstImageUrl]];
     NSLog(@"%@", firstImage);
     
-    [self.window addSubview:imageViewController.imageView];
+//    [[NSBundle mainBundle] loadNibNamed:@"MyNib" owner:self options:nil];
+//    [self.window addSubview:imageViewController.imageView];
     
-    NSLog(@"%@", imageViewController.imageView);
+//    NSLog(@"%@", imageViewController.imageView);
 
-    [imageViewController.imageView setImage:firstImage];
-    NSLog(@"%@", imageViewController.imageView);
+//    [imageViewController.imageView setImage:firstImage];
+//    NSLog(@"%@", imageViewController.imageView);
 
-    [self.window makeKeyAndVisible];
 
+    MyImageViewClass *ivc = [[MyImageViewClass alloc] init];
+    [[NSBundle mainBundle] loadNibNamed:@"MyImageView" owner:ivc options:nil];
+    [ivc.imageView setImage: firstImage];
+    [self.window addSubview: ivc.imageView];
+    ivc.imageView.center = CGPointMake(100,100);
+    
     
 //    [self.imageView setImage:firstImage];
 //    NSLog(@"%@", self.imageView);
